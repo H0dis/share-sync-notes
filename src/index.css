@@ -2,39 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Collaborative Notepad Design System - Modern, Professional Conference Room Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Main theme colors - Professional blue-based palette */
+    --background: 0 0% 99%;
+    --foreground: 213 31% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 213 31% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 213 31% 9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Professional blue for host/main actions */
+    --primary: 213 94% 68%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 213 100% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Subtle grays for participants */
+    --secondary: 210 11% 96%;
+    --secondary-foreground: 213 31% 9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 213 13% 95%;
+    --muted-foreground: 213 19% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 213 94% 68%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 213 13% 91%;
+    --input: 213 13% 95%;
+    --ring: 213 94% 68%;
 
     --radius: 0.5rem;
 
@@ -55,42 +57,74 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+    /* Collaboration-specific colors */
+    --session-code: 45 100% 65%;
+    --user-note: 213 94% 68%;
+    --other-note: 213 13% 95%;
+
+    /* Gradients for modern appeal */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-session: linear-gradient(135deg, hsl(var(--session-code)), hsl(45 100% 75%));
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 25px -5px hsl(var(--primary) / 0.1);
+    --shadow-session: 0 8px 30px -8px hsl(var(--session-code) / 0.3);
+  }
+
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 213 31% 4%;
+    --foreground: 213 13% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 213 31% 6%;
+    --card-foreground: 213 13% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 213 31% 6%;
+    --popover-foreground: 213 13% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 213 94% 68%;
+    --primary-foreground: 213 31% 4%;
+    --primary-glow: 213 100% 75%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 213 31% 12%;
+    --secondary-foreground: 213 13% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 213 31% 12%;
+    --muted-foreground: 213 19% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 213 94% 68%;
+    --accent-foreground: 213 31% 4%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 213 13% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 213 31% 15%;
+    --input: 213 31% 12%;
+    --ring: 213 94% 68%;
+    /* Dark mode collaboration colors */
+    --session-code: 45 100% 65%;
+    --user-note: 213 94% 68%;
+    --other-note: 213 31% 12%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-session: linear-gradient(135deg, hsl(var(--session-code)), hsl(45 100% 70%));
+    
+    /* Dark mode shadows */
+    --shadow-elegant: 0 10px 25px -5px hsl(0 0% 0% / 0.3);
+    --shadow-session: 0 8px 30px -8px hsl(var(--session-code) / 0.4);
+
+    --sidebar-background: 213 31% 6%;
+    --sidebar-foreground: 213 13% 95%;
+    --sidebar-primary: 213 94% 68%;
+    --sidebar-primary-foreground: 213 31% 4%;
+    --sidebar-accent: 213 31% 12%;
+    --sidebar-accent-foreground: 213 13% 95%;
+    --sidebar-border: 213 31% 15%;
+    --sidebar-ring: 213 94% 68%;
   }
 }
 
@@ -100,6 +134,33 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Smooth scrolling for better UX */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom utility classes for the collaborative notepad */
+  .session-code-display {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-500 text-yellow-900 font-mono text-4xl font-bold px-6 py-4 rounded-lg shadow-lg;
+    box-shadow: var(--shadow-session);
+  }
+
+  .note-card {
+    @apply bg-card border border-border rounded-lg p-4 transition-all duration-300 hover:shadow-md;
+  }
+
+  .note-card.own-note {
+    @apply border-primary/20 bg-primary/5;
+  }
+
+  .note-card.other-note {
+    @apply border-border bg-muted/30;
+  }
+
+  .floating-input {
+    @apply bg-background/80 backdrop-blur-sm border border-border rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200;
   }
 }
